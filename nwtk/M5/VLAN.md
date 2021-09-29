@@ -1,4 +1,4 @@
-# VLAN
+# VLAN (Virtual Local Area Network)
 
 ## Was ist ein VLAN?
 
@@ -6,7 +6,6 @@
 
 Jedes VLAN hat eine eigene Broadcast-Domain, d.h. Kommunikation ist nur innerhalb eines VLANs möglich. Sie partitionieren das Netzwerk auf Layer 2. Inter VLAN Kommunikation ist nur mit einem Router möglich. In einem physikalischen Netzwerk können mehrere logische Netzwerke erzeugt werden. 
 
-VLANs zu gründen ist nur mit Managed Switches möglich. 
 
 ## Vorteile von VLAN
 
@@ -18,6 +17,8 @@ VLANs zu gründen ist nur mit Managed Switches möglich.
   * Zur Kontrolle der Reichweite von Broadcasts und ihr Einfluss am Netz
 * Simples Projekt und Applikationsmanagement
 
+[3]
+
 ## Portbasiertes (untagged) VLAN
 
 Hier werden VLANs den Ports eines Switches zugewiesen. Das bedeutet das alle Netze im selben VLAN müssen miteinander verbunden sein. [2]
@@ -27,7 +28,7 @@ Hier werden VLANs den Ports eines Switches zugewiesen. Das bedeutet das alle Net
 Hier enthalten die Frames zusätzlich noch einen Tag, der besagt in welchem VLAN sie gesendet werden. Das bedeutet, dass nicht alle Teilnehmer eines VLANs direkt mit einander Verbunden sein müssen. Der Switch entscheidet wie er Datei verschicken muss, um zu den richtigen Teilnehmer zu kommen. Das wird auch als ***Trunking*** bezeichnet.[2]
 
 > * Ein VLAN Trunk trägt mehr als ein VLAN
-> * EIN VLAN Trunk wird meist zwischen Switches erstellt, sodass VLAN Geräte miteinander Kommunizieren können, auch ohne physischen Verbindung
+> * Ein VLAN Trunk wird meist zwischen Switches erstellt, sodass VLAN Geräte miteinander Kommunizieren können, auch ohne physischen Verbindung
 
 ## VLANs erstellen und verwalten
 
