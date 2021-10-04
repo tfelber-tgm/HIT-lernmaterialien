@@ -32,6 +32,8 @@ Hier enthalten die Frames zusätzlich noch einen Tag, der besagt in welchem VLAN
 
 ## VLANs erstellen und verwalten
 
+Um in den privilegierten EXEC Modus zu gelangen gibt man `enable` oder einfach  `en` ein. Ab jetzt kann man VLANs konfigurieren.
+
 Mittels `show vlan brief` wird eine Übersicht der VLANs ausgegeben.
 
 Um ein VLAN zu erstellen muss man in den Konfigurationsmodus mittels `configure terminal` gehen. Mittels `vlan vlan_id` erstellt man das VLAN mit einer vlan_id, die noch nicht verwendet wird. Einen Namen kann man dem VLAN durch `name vlan_name` zuweisen. [3]
@@ -53,11 +55,11 @@ Bsp:
 S1# configure terminal
 S1(config)# interface F0/18
 S1(config-if)# switchport mode access
-S1(config-if)# switchport mode access vlan 20
+S1(config-if)# switchport access vlan 20
 S1(config-if)# end
 ```
 
-
+Durch `exit` springt man wieder eine Stufe höher, um z.B. noch ein VLAN zuzuordnen. `end` hingegen springt wieder ganz zurück zum Anfang.
 
 Quellen:
 
