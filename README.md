@@ -5,6 +5,6 @@ Die Lernmaterialien die hier zu finden sind, sind Zusammenfassungen der Theorie.
 Zurzeit wird gearbeitet an:
 * Netzwerktechnik
 
-Dieses Repo ist ein persönliches Projekt von mir und werde versuchen es laufend zu erweitern und zu überarbeiten.
+Dieses Repo ist ein persönliches Projekt von mir und werde es versuchen es laufend zu erweitern und zu überarbeiten.
 
 -Julian Huber, 3AHIT
