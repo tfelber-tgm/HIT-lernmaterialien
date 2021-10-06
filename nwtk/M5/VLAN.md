@@ -79,6 +79,40 @@ Um die Trunks zu vervollständigen müssen auch die Trunk Ports auf allen andere
 
 Um die Konfiguration zu überprüfen gibt man `show interfaces (interface_id) switchport` ein. [3]
 
+## Inter VLAN-Routing
+
+Wie am Anfang dieses Textes bereits besprochen haben, brauchen wir einen Router, um Kommunikation zwischen VLANs zu ermöglichen. Hierzu müssen alle VLANs mit dem Router verbunden sein. Heutzutage wird dies nur noch über Trunks realisiert. Dies nennt sich Router-on-a-Stick.
+
+Hierzu setzen wir den Port, der mit dem Router verbunden ist als Trunk Port. Erinnerung: `switchport mode trunk` 
+
+Wegen dem Trunk müssen wir auf dem Router virtuelle Ports verwenden. Der Port wird ausgewählt durch `interface (interface_id).(vlan_id)`. [3] Danach wird für den Port die Dot1Q Encapsulation `encapsulation dot1q (vlan_id) `festgelegt, um ein Router Interface als Trunk festzulegen. [4]
+
+Zuletzt wird noch die Gateway-Adresse festgelegt: `ip address (ip_address) (subnet_mask)`
+
+Bsp:
+
+```
+R1(config)# int g0/0.10
+R1(config-if)# encapsulation dot1q 10
+R1(config-if)# ip address 198.162.10.1
+R1(config-if)# int g0/0.20
+R1(config-if)# encapsulation dot1q 20
+R1(config-if)# ip address 198.162.20.1
+R1(config-if)# end
+```
+
+[3]
+
+ 
+
+
+
+
+
+
+
+
+
 Quellen:
 
 [1] https://www.ionos.de/digitalguide/server/knowhow/vlan-grundlagen/
@@ -86,3 +120,5 @@ Quellen:
 [2] https://networkdirection.net/articles/network-theory/taggeduntaggedandnativevlans/
 
 [3] Cisco Netacad "Routing & Switching"
+
+[4] https://www.howtonetwork.net/public/708
